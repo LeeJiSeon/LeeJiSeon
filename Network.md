@@ -164,14 +164,14 @@ ex) DB의 학생 정보가 자원일 때, 'students'를 자원의 표현으로 �
   * Read : 조회(GET)
   * Update : 수정(PUT)
   * Delete : 삭제(DELETE)
-  * HEAD: header 정보 조회(HEAD)
+  * HEAD : header 정보 조회(HEAD)
   
 #### [구성요소]
-* 자원(Resource): URI
+* 자원(Resource) : URI
   * 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
   * 자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
   * Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
-* 행위(Verb): HTTP Method
+* 행위(Verb) : HTTP Method
   * HTTP 프로토콜의 Method를 사용한다.
   * HTTP 프로토콜은 GET, POST, PUT, DELETE 와 같은 메서드를 제공한다.
 * 표현(Representation of Resource)
@@ -179,8 +179,13 @@ ex) DB의 학생 정보가 자원일 때, 'students'를 자원의 표현으로 �
   * REST에서 하나의 자원은 JSON, XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.
   * JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
 
+### _2) REST API_
+> : REST 기반으로 서비스 API를 구현한 것
+* API(Application Programming Interface) : 데이터와 기능의 집합을 제공하여 컴퓨터 프로그램간 상호작용을 촉진하며, 서로 정보를 교환가능 하도록 하는 것
 
-
+### _3) RESTful_
+> : 일반적으로 REST라는 아키텍처를 구현하는 웹 서비스를 나타내기 위해 사용되는 용어이다.
+* ‘REST API’를 제공하는 웹 서비스를 ‘RESTful’하다고 할 수 있다.
 
 
 ---
@@ -188,4 +193,5 @@ ex) DB의 학생 정보가 자원일 때, 'students'를 자원의 표현으로 �
 1. <https://github.com/WeareSoft/tech-interview/blob/master/contents/network.md>
 1. <https://reakwon.tistory.com/59>
 1. <https://mangkyu.tistory.com/15?category=762469>
+1. <https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html>
 1. <https://mangkyu.tistory.com/48?category=762469>
