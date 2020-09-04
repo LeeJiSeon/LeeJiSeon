@@ -102,9 +102,10 @@ __[UDP 특징]__
 
 ## 3. 통신 방식
 ### _1) Http (HyperText Transfer Protocol)_
-> : 클라이언트의 요청(request)이 있을 때만 서버가 응답(Response)하여 해당 정보를 전송하고 곧바로 연결을 종료하는 방식
+> : 클라이언트의 요청(request)이 있을 때만 서버가 응답(Response)하여 해당 정보를 전송하고 곧바로 연결을 종료하는 방식  
 
 ![http](https://t1.daumcdn.net/cfile/tistory/99926F335C6939EA38 "http")
+
 #### [Http 통신의 특징]
 * TCP와 UDP를 사용하며, 80번 포트를 사용한다.
 * 단방향적 통신
@@ -128,14 +129,58 @@ __[UDP 특징]__
 * 즉, 중간에서 정보를 볼 수 없도록 주고받는 정보를 암호화하는 방법인 HTTPS를 사용하는 것이다.
 
 ### _2) Socket_
-> :  Server와 Client가 특정 Port를 통해 실시간으로 양방향 통신을 하는 방식
+> :  Server와 Client가 특정 Port를 통해 실시간으로 양방향 통신을 하는 방식  
+
 ![socket](https://t1.daumcdn.net/cfile/tistory/9939C6385C6939FD26 "socket")
+
 #### [Socket 통신의 특징]
 * Server와 Client가 계속 연결을 유지하는 양방향 통신이다.
 * Server와 Client가 실시간으로 데이터를 주고받는 상황이 필요한 경우에 사용된다.
 * 실시간 동영상 Streaming이나 온라인 게임 등과 같은 경우에 자주 사용된다.
 
 ## 4. REST
+### _1) REST (Representational State Transfer)_
+> : 자원을 이름(자원의 표현)으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것
+
+* REST는 기본적으로 웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하기 때문에 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일이다.
+* REST는 네트워크 상에서 Client와 Server 사이의 통신 방식 중 하나이다.
+
+#### <자원>
+* 해당 소프트웨어가 관리하는 모든 것
+  * 문서, 그림, 데이터, 해당 소프트웨어 자체 등
+#### <자원의 표현>
+* 그 자원을 표현하기 위한 이름
+```
+ex) DB의 학생 정보가 자원일 때, 'students'를 자원의 표현으로 정한다.
+```
+#### <상태(정보) 전달>
+* 데이터가 요청되어지는 시점에서 자원의 상태(정보)를 전달한다.
+* JSON 혹은 XML를 통해 데이터를 주고받는 것이 일반적이다.
+
+#### [구체적인 개념]
+* HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.
+* CRUD Operation
+  * Create : 생성(POST)
+  * Read : 조회(GET)
+  * Update : 수정(PUT)
+  * Delete : 삭제(DELETE)
+  * HEAD: header 정보 조회(HEAD)
+  
+#### [구성요소]
+* 자원(Resource): URI
+  * 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
+  * 자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.
+  * Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
+* 행위(Verb): HTTP Method
+  * HTTP 프로토콜의 Method를 사용한다.
+  * HTTP 프로토콜은 GET, POST, PUT, DELETE 와 같은 메서드를 제공한다.
+* 표현(Representation of Resource)
+  * Client가 자원의 상태(정보)에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.
+  * REST에서 하나의 자원은 JSON, XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.
+  * JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
+
+
+
 
 
 ---
